@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muistipeli memory game peli jutska</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-fruits">
+    <div class="game-container">
+        <h1>Muistipeli (hieno sellainen)</h1>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="card-count-select">Korttien määrä</label>
+                <select id="card-count-select">
+                    <option value="8">8 korttia (4 paria)</option>
+                    <option value="12">12 korttia (6 paria)</option>
+                    <option value="16" selected>16 korttia (8 paria)</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="theme-select">Teema</label>
+                <select id="theme-select">
+                    <option value="fruits" selected>Hedelmät</option>
+                    <option value="animals">Eläimet</option>
+                </select>
+            </div>
+
+            <button id="start-button">Aloita peli</button>
+            <button id="restart-button" disabled>Aloita alusta</button>
+        </div>
+
+        <div class="stats">
+            <div>Yritykset: <span id="moves">0</span></div>
+            <div>Aika: <span id="time">0:00</span></div>
+            <div>Pisteet: <span id="score">0</span></div>
+        </div>
+
+        <div id="game-board"></div>
+
+        <div id="message" class="message"></div>
+
+        <!-- Äänet(oli kyl yks työmaa) -->
+        <audio id="flip-sound" src="comedy_pop_finger_in_mouth_001.mp3" preload="auto"></audio>
+        <audio id="match-sound" src="spelling-bee.mp3" preload="auto"></audio>
+    </div>
+
+    <script type="module" src="game.js"></script>
+</body>
+</html>
