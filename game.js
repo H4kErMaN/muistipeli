@@ -119,7 +119,7 @@ function startGame() {
             play(winSound);
 
             msgEl.textContent =
-                `Onneksi olkoon! Löysit kaikki ${pairs} paria ` +
+                `jippikai jee löysit kai kaikki ${pairs} paria ` +
                 `${attempts} yrityksellä ajassa ${timeEl.textContent}. ` +
                 `Pisteet: ${score}.`;
         }
@@ -129,4 +129,5 @@ function startGame() {
 }
 
 startButton.addEventListener("click", startGame);
+
 restartButton.addEventListener("click", startGame);
